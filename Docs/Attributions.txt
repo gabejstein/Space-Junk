@@ -1,0 +1,25 @@
+-laser1.wav
+	By dklon
+
+-Juhani Junkala [Chiptune Adventures] 2. Stage2.ogg
+	By Subspace Audio / Juhani Junkala
+	https://juhanijunkala.com/
+	
+-Explosion_03.wav
+-Pickup_04.wav
+	By Little Robot Sound Factory
+
+-spiked_ship.png
+	By Skorpio
+	http://opengameart.org/users/skorpio
+
+-fire04.png
+-smoke_01.png
+	By Kenney
+	Kenney.nl
+
+-Props In Pixels Pack
+	By RRFreelance - PixelBurner 
+	https://rrfreelance-pixelburner.itch.io/
+
+Special thanks to Pikuma.com and Parallel Realities for their great SDL tutorials.

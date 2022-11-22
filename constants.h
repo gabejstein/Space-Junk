@@ -1,0 +1,16 @@
+#define SCREEN_WIDTH 800
+#define SCREEN_HEIGHT 640
+
+#define FPS 60
+#define MILLISECS_PER_FRAME (1000 / FPS)
+
+#define MAX_KEYBOARD_KEYS 255
+
+#define GLYPH_WIDTH 18
+#define GLYPH_HEIGHT 28
+
+#define MAX_TEXT_LINES 100
+
+#define MAX_POOL_OBJECTS 200
+
+#define MAX_SND_CHANNELS 8
