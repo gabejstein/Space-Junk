@@ -402,6 +402,7 @@ static void CheckCollisions()
 GameState* GetPlayState(void)
 {
 	GameState* newState = (GameState*) malloc(sizeof(GameState));
+	memset(newState, 0, sizeof(GameState));
 	if (newState == NULL)
 	{
 		printf("Could not allocate memory for game state.\n");

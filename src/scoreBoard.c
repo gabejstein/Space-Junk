@@ -2,7 +2,9 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "system/input.h"
+#include "system/graphics.h"
 #include "titleState.h"
+#include "Starfield.h"
 
 #define MAX_NAME_LENGTH 8
 #define MAX_HIGH_SCORES 5
@@ -77,6 +79,7 @@ void InitScoreBoard(void)
 		for (i = 0; i < MAX_HIGH_SCORES; i++)
 		{
 			strncpy(highScores[i].name, "NONE", MAX_NAME_LENGTH);
+			highScores[i].name[4] = '\0';
 			highScores[i].score = 500 - i * 10;
 		}
 	}
@@ -266,6 +269,8 @@ static void SortScores(Score s[])
 GameState* GetScoreBoardState(void)
 {
 	GameState* newState = (GameState*)malloc(sizeof(GameState));
+	memset(newState, 0, sizeof(GameState));
+
 	if (newState == NULL)
 	{
 		printf("Could not allocate memory for game state.\n");

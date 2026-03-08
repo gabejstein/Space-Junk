@@ -39,6 +39,7 @@ static void cleanup()
 GameState* GetTitleState(void)
 {
 	GameState* newState = (GameState*) malloc(sizeof(GameState));
+	memset(newState, 0, sizeof(GameState));
 
 	if (newState == NULL)
 	{
