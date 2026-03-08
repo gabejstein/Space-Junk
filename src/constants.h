@@ -11,6 +11,4 @@
 
 #define MAX_TEXT_LINES 100
 
-#define MAX_POOL_OBJECTS 200
-
 #define MAX_SND_CHANNELS 8

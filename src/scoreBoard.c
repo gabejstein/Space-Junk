@@ -2,6 +2,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "system/input.h"
+#include "titleState.h"
 
 #define MAX_NAME_LENGTH 8
 #define MAX_HIGH_SCORES 5

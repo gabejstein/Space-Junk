@@ -2,6 +2,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "system/graphics.h"
+#include "playState.h"
 
 static SDL_Texture* titleCard;
 

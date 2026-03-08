@@ -9,11 +9,16 @@
 #include "scoreBoard.h"
 #include "Starfield.h"
 
-static int playerScore;
-static int playerLives;
+#define MAX_POOL_OBJECTS 200
+#define NEW_LIFE_INTERVAL 50
+#define MAX_JUNK_TYPES 6
+
+static unsigned int playerScore;
+static unsigned int playerLives;
+static unsigned int toNextLife = NEW_LIFE_INTERVAL;
 
 static SDL_Texture* spaceShipTexture;
-static SDL_Texture* junkTexture[6];
+static SDL_Texture* junkTexture[MAX_JUNK_TYPES];
 static SDL_Texture* projectileTexture;
 static SDL_Texture* smokeTexture;
 
@@ -36,9 +41,9 @@ static float spawnInterval = 1;
 static float lastSpawnTime = 0.0f;
 static float lastFiredTime = 0.0f;
 
-static float fireRate = 0.3f;
-static float junkSpeed = 600.0f;
-static float projectileSpeed = 500.0f;
+static const float fireRate = 0.3f;
+static const float junkSpeed = 600.0f;
+static const float projectileSpeed = 500.0f;
 
 static int paused = 0;
 static int resetTimer;
@@ -171,12 +176,11 @@ static void cleanup()
 	printf("Exiting play state.\n");
 
 	SDL_DestroyTexture(spaceShipTexture);
-	SDL_DestroyTexture(junkTexture[0]);
-	SDL_DestroyTexture(junkTexture[1]);
-	SDL_DestroyTexture(junkTexture[2]);
-	SDL_DestroyTexture(junkTexture[3]);
 	SDL_DestroyTexture(projectileTexture);
 	SDL_DestroyTexture(smokeTexture);
+
+	for (int i = 0; i < MAX_JUNK_TYPES; i++)
+		SDL_DestroyTexture(junkTexture[i]);
 }
 
 static void UpdatePlayer()
@@ -205,6 +209,7 @@ static void UpdatePlayer()
 	if (ship.position.x + ship.w > SCREEN_WIDTH)
 		ship.position.x = SCREEN_WIDTH - ship.w;
 }
+
 static void UpdateObjects()
 {
 	for (int i = 0; i < MAX_POOL_OBJECTS; i++)
@@ -237,10 +242,9 @@ static void SpawnRandomObject()
 			objects[oIndex].position.x = rand() % SCREEN_WIDTH;
 			objects[oIndex].position.y = -10 - (rand()%60);
 			objects[oIndex].velocity.y = junkSpeed;
-			
 			objects[oIndex].tag = TAG_JUNK;
 
-			int junkType = rand() % 6;
+			int junkType = rand() % MAX_JUNK_TYPES;
 
 			switch (junkType)
 			{
@@ -269,8 +273,7 @@ static void SpawnRandomObject()
 
 			SDL_QueryTexture(objects[oIndex].texture, NULL, NULL, &objects[oIndex].w, &objects[oIndex].w);
 			
-
-			oIndex = MAX_POOL_OBJECTS % (oIndex + 1);
+			oIndex = (oIndex + 1) % MAX_POOL_OBJECTS;
 			
 		}
 
@@ -381,13 +384,15 @@ static void CheckCollisions()
 				objects[i].isActive = 0;
 				PlaySound(1, 1);
 				playerScore++;
-				if (playerScore % 50 == 0) //This should go before the bonus so its not skipped
+				if (objects[i].texture == junkTexture[0]) //give a little bonus for the fastest object
+					playerScore += 9;
+
+				if (playerScore >=toNextLife) //This should go before the bonus so its not skipped
 				{
 					playerLives++;
+					toNextLife += NEW_LIFE_INTERVAL;
 					PlaySound(2, 2);
 				}
-				if (objects[i].texture == junkTexture[0]) //give a little bonus
-					playerScore += 9;
 				
 			}
 		}

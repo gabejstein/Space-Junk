@@ -4,7 +4,7 @@
 #include <stdlib.h>
 #include "../game.h"
 
-SDL_Texture* fontTexture;
+static SDL_Texture* fontTexture;
 
 void LoadFontTexture(char* filePath)
 {
