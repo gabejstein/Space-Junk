@@ -153,29 +153,29 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="collision.c" />
-    <ClCompile Include="game.c" />
-    <ClCompile Include="graphics.c" />
-    <ClCompile Include="input.c" />
-    <ClCompile Include="main.c" />
-    <ClCompile Include="playState.c" />
-    <ClCompile Include="scoreBoard.c" />
-    <ClCompile Include="sound.c" />
-    <ClCompile Include="StarField.c" />
-    <ClCompile Include="titleState.c" />
+    <ClCompile Include="src\system\collision.c" />
+    <ClCompile Include="src\game.c" />
+    <ClCompile Include="src\system\graphics.c" />
+    <ClCompile Include="src\system\input.c" />
+    <ClCompile Include="src\main.c" />
+    <ClCompile Include="src\playState.c" />
+    <ClCompile Include="src\scoreBoard.c" />
+    <ClCompile Include="src\system\sound.c" />
+    <ClCompile Include="src\StarField.c" />
+    <ClCompile Include="src\titleState.c" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="collision.h" />
-    <ClInclude Include="constants.h" />
-    <ClInclude Include="game.h" />
-    <ClInclude Include="graphics.h" />
-    <ClInclude Include="input.h" />
-    <ClInclude Include="playState.h" />
-    <ClInclude Include="scoreBoard.h" />
-    <ClInclude Include="sound.h" />
-    <ClInclude Include="Starfield.h" />
-    <ClInclude Include="structs.h" />
-    <ClInclude Include="titleState.h" />
+    <ClInclude Include="src\system\collision.h" />
+    <ClInclude Include="src\constants.h" />
+    <ClInclude Include="src\game.h" />
+    <ClInclude Include="src\system\graphics.h" />
+    <ClInclude Include="src\system\input.h" />
+    <ClInclude Include="src\playState.h" />
+    <ClInclude Include="src\scoreBoard.h" />
+    <ClInclude Include="src\system\sound.h" />
+    <ClInclude Include="src\Starfield.h" />
+    <ClInclude Include="src\structs.h" />
+    <ClInclude Include="src\titleState.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

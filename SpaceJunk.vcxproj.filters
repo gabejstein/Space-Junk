@@ -15,69 +15,69 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="main.c">
+    <ClCompile Include="src\main.c">
       <Filter>ソース ファイル</Filter>
     </ClCompile>
-    <ClCompile Include="game.c">
+    <ClCompile Include="src\game.c">
       <Filter>ソース ファイル</Filter>
     </ClCompile>
-    <ClCompile Include="input.c">
+    <ClCompile Include="src\system\input.c">
       <Filter>ソース ファイル</Filter>
     </ClCompile>
-    <ClCompile Include="graphics.c">
+    <ClCompile Include="src\system\graphics.c">
       <Filter>ソース ファイル</Filter>
     </ClCompile>
-    <ClCompile Include="playState.c">
+    <ClCompile Include="src\playState.c">
       <Filter>ソース ファイル</Filter>
     </ClCompile>
-    <ClCompile Include="collision.c">
+    <ClCompile Include="src\system\collision.c">
       <Filter>ソース ファイル</Filter>
     </ClCompile>
-    <ClCompile Include="titleState.c">
+    <ClCompile Include="src\titleState.c">
       <Filter>ソース ファイル</Filter>
     </ClCompile>
-    <ClCompile Include="scoreBoard.c">
+    <ClCompile Include="src\scoreBoard.c">
       <Filter>ソース ファイル</Filter>
     </ClCompile>
-    <ClCompile Include="StarField.c">
+    <ClCompile Include="src\StarField.c">
       <Filter>ソース ファイル</Filter>
     </ClCompile>
-    <ClCompile Include="sound.c">
+    <ClCompile Include="src\system\sound.c">
       <Filter>ソース ファイル</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="game.h">
+    <ClInclude Include="src\game.h">
       <Filter>ヘッダー ファイル</Filter>
     </ClInclude>
-    <ClInclude Include="constants.h">
+    <ClInclude Include="src\constants.h">
       <Filter>ヘッダー ファイル</Filter>
     </ClInclude>
-    <ClInclude Include="input.h">
+    <ClInclude Include="src\system\input.h">
       <Filter>ヘッダー ファイル</Filter>
     </ClInclude>
-    <ClInclude Include="graphics.h">
+    <ClInclude Include="src\system\graphics.h">
       <Filter>ヘッダー ファイル</Filter>
     </ClInclude>
-    <ClInclude Include="structs.h">
+    <ClInclude Include="src\structs.h">
       <Filter>ヘッダー ファイル</Filter>
     </ClInclude>
-    <ClInclude Include="playState.h">
+    <ClInclude Include="src\playState.h">
       <Filter>ヘッダー ファイル</Filter>
     </ClInclude>
-    <ClInclude Include="collision.h">
+    <ClInclude Include="src\system\collision.h">
       <Filter>ヘッダー ファイル</Filter>
     </ClInclude>
-    <ClInclude Include="titleState.h">
+    <ClInclude Include="src\titleState.h">
       <Filter>ヘッダー ファイル</Filter>
     </ClInclude>
-    <ClInclude Include="scoreBoard.h">
+    <ClInclude Include="src\scoreBoard.h">
       <Filter>ヘッダー ファイル</Filter>
     </ClInclude>
-    <ClInclude Include="Starfield.h">
+    <ClInclude Include="src\Starfield.h">
       <Filter>ヘッダー ファイル</Filter>
     </ClInclude>
-    <ClInclude Include="sound.h">
+    <ClInclude Include="src\system\sound.h">
       <Filter>ヘッダー ファイル</Filter>
     </ClInclude>
   </ItemGroup>
