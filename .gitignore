@@ -1,6 +1,7 @@
 #Ignore folders inside the project directory
 
 working_files
+releases
 
 #Ignore common Visual Studio and build artifacts
 
